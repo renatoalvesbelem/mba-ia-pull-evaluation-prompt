@@ -1,0 +1,79 @@
+
+==================================================
+AVALIAÇÃO DE PROMPTS OTIMIZADOS
+==================================================
+
+Provider: openai
+Modelo Principal: gpt-4o-mini
+Modelo de Avaliação: gpt-4o
+
+Criando dataset de avaliação: bug-to-user-story-optimization-eval...
+   ✓ Carregados 15 exemplos do arquivo datasets/bug_to_user_story.jsonl
+   ✓ Dataset 'bug-to-user-story-optimization-eval' já existe, usando existente
+
+======================================================================
+PROMPTS PARA AVALIAR
+======================================================================
+
+Este script irá puxar prompts do LangSmith Hub.
+Certifique-se de ter feito push dos prompts antes de avaliar:
+  python src/push_prompts.py
+
+
+🔍 Avaliando: renatoalvesbelem/bug_to_user_story_v2
+   Puxando prompt do LangSmith Hub: renatoalvesbelem/bug_to_user_story_v2
+   ✓ Prompt carregado com sucesso
+   Dataset: 15 exemplos
+   Avaliando exemplos...
+      [1/15] F1:0.75 Clarity:0.85 Precision:0.90
+      [2/15] F1:0.75 Clarity:0.90 Precision:0.90
+      [3/15] F1:0.87 Clarity:0.90 Precision:1.00
+      [4/15] F1:0.69 Clarity:0.90 Precision:0.90
+      [5/15] F1:0.69 Clarity:0.85 Precision:0.67
+      [6/15] F1:0.75 Clarity:0.90 Precision:0.90
+      [7/15] F1:0.90 Clarity:0.80 Precision:0.67
+      [8/15] F1:0.95 Clarity:0.95 Precision:1.00
+      [9/15] F1:0.85 Clarity:0.90 Precision:0.90
+      [10/15] F1:0.75 Clarity:0.85 Precision:0.83
+      [11/15] F1:0.80 Clarity:0.85 Precision:0.90
+      [12/15] F1:0.69 Clarity:0.85 Precision:0.67
+      [13/15] F1:0.90 Clarity:0.90 Precision:1.00
+      [14/15] F1:0.80 Clarity:0.90 Precision:1.00
+      [15/15] F1:1.00 Clarity:0.90 Precision:0.67
+
+==================================================
+Prompt: renatoalvesbelem/bug_to_user_story_v2
+==================================================
+
+Métricas Derivadas:
+  - Helpfulness: 0.87 ✓
+  - Correctness: 0.83 ✓
+
+Métricas Base:
+  - F1-Score: 0.81 ✓
+  - Clarity: 0.88 ✓
+  - Precision: 0.86 ✓
+
+--------------------------------------------------
+📊 MÉDIA GERAL: 0.8505
+--------------------------------------------------
+
+✅ STATUS: APROVADO - Todas as métricas >= 0.8
+
+==================================================
+RESUMO FINAL
+==================================================
+
+Prompts avaliados: 1
+Aprovados: 1
+Reprovados: 0
+
+✅ Todos os prompts atingiram todas as métricas >= 0.8!
+
+✓ Confira os resultados em:
+  https://smith.langchain.com/projects/bug-to-user-story-optimization
+
+Próximos passos:
+1. Documente o processo no README.md
+2. Capture screenshots das avaliações
+3. Faça commit e push para o GitHub
